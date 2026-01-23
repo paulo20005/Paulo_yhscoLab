@@ -1,0 +1,31 @@
+RELATIONSHIP STATEMENTS FÖR YRKESCO
+
+1. STUDENT
+   - En Student tillhör EN Klass (M:1)
+
+2. KLASS
+   - En Klass har MÅNGA Studenter (1:M)
+   - En Klass tillhör ETT Program (M:1)
+   - En Klass ledes av EN Utbildningsledare (M:1)
+
+3. PROGRAM
+   - Ett Program har 3 Klasser (1:3)
+   - Ett Program innehåller MÅNGA Kurser (1:M)
+
+4. KURS
+   - En Kurs ingår i ETT Program (M:1)
+   - En Kurs undervisas av MÅNGA Utbildare (M:N)
+
+5. UTBILDARE
+   - En Utbildare undervisar MÅNGA Kurser (M:N)
+   - En Utbildare KAN vara en Konsult (1:0..1)
+
+6. UTBILDNINGSLEDARE
+   - En Utbildningsledare ansvarar 3 Klasser (1:3)
+
+7. KONSULT
+   - En Konsult är EN Utbildare (1:1)
+   - En Konsult representerar ETT Företag (M:1)
+
+8. FÖRETAG
+   - Ett Företag anlitar MÅNGA Konsulter (1:M)
