@@ -19,7 +19,7 @@ CREATE TABLE Utbildningsledare (
 CREATE TABLE Klass (
     klass_id SERIAL PRIMARY KEY,
     klass_namn VARCHAR(50) NOT NULL,
-    program_id INTEGER REFERENCES Program(program_id),
+    program_id INTEGER REFERENCES Program(program_id), 
     ledare_id INTEGER REFERENCES Utbildningsledare(ledare_id)
 );
 
@@ -63,9 +63,9 @@ CREATE TABLE Företag (
 -- 8. KONSULT - en utbildare som jobbar via ett företag (MED TIMARVODE)
 CREATE TABLE Konsult (
     konsult_id SERIAL PRIMARY KEY,
-    utbildare_id INTEGER REFERENCES Utbildare(utbildare_id),
+    utbildare_id INTEGER REFERENCES Utbildare(utbildare_id), -- den 
     foretag_id INTEGER REFERENCES Företag(foretag_id),
-    timarvode DECIMAL(10, 2) NOT NULL,  -- 
+    timarvode DECIMAL(10, 2) NOT NULL,  --  
     UNIQUE(utbildare_id)
 );
 
